@@ -18,7 +18,7 @@ function App() {
   }, []);
   useEffect(() => {
     if (!coords) return;
-    const API_KEY = import.meta.env.VITE_OPENWEATHER_KEY;
+    const API_KEY = 'ca3d94ccf23245c082753c721bb08f78';
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&lat=${coords.lat}&lon=${coords.lon}&appid=${API_KEY}&units=metric&lang=es`;
     axios
       .get<WeatherResponse>(url)
@@ -60,7 +60,7 @@ function App() {
     style={objStyles}  
       className="min-h-screen flex justify-center items-center bg-slate-900 text-white flex-col bg-no-repeat bg-cover opacity-80"
     >
-      <h1 className="text-4xl font-bold mb-12 text-black shadow-gray-700">Weather App</h1>
+      <h1 className="text-4xl font-bold mb-12 text-black shadow-gray-700">Weather Aplicacion</h1>
       {isLoading && (
         <>
           <Loader />
